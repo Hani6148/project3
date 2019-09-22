@@ -1,6 +1,12 @@
 import axios from "axios";
 
 export default {
+
+  saveFile: function(){
+    // $('#fileupload').fileupload();
+      alert("this is a test")
+    // return axios.get("/api/savedFile/"+)
+  },
   // Gets all books
   getBooks: function() {
     return axios.get("/api/books");

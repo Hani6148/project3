@@ -1,0 +1,12 @@
+body{
+    margin: 5px;
+}
+
+.profileImg{
+    /* margin:10px auto 10px auto; */
+    border: 3px; 
+    border-color: blue;
+    width: 495px;
+    height: 200px;
+  
+}
