@@ -42,13 +42,13 @@ class Signup extends React.Component {
                     <div className="form-group">
                         <button type="submit" className="btn btn-success btn-block login-btn">Sign up</button>
                     </div>
-                    <div className="clearfix">
+                    {/* <div className="clearfix">
                         <label className="pull-left checkbox-inline"><input type="checkbox" /> Remember me</label>
                         <a href="#" className="pull-right text-success">Forgot Password?</a>
-                    </div>
-
+                    </div> */}
+                    <div className="hint-text small">Already have an account? <a href="#" className="text-success">login</a></div>
                 </form>
-                <div className="hint-text small">Already have an account? <a href="#" className="text-success">login</a></div>
+              
             </div>
             </div>
             </div>
@@ -56,5 +56,4 @@ class Signup extends React.Component {
         )
     }
 }
-
 export default Signup;
