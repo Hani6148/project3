@@ -3,7 +3,6 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Books from "./pages/Books";
 import Detail from "./pages/Detail";
 import NoMatch from "./pages/NoMatch";
-import Nav from "./components/Nav";
 // import footer from "./components/";
 import Login from "./components/Login/Login";
 import Signup from "./components/Signup/Signup";
@@ -12,7 +11,6 @@ function App() {
   return (
     <Router>
       <div>
-        <Nav />
 
         <Switch>
           
