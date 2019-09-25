@@ -9,6 +9,16 @@ mongoose.connect(
 );
 
 const bookSeed = [
+  // {
+  //   title: "THE MOONLIGHT PARADE",
+  //   author: "Chicago Department of Cultural Affairs and Special Events (DCASE)",
+  //   synopsis: " All the world’s a stage – especially at Millennium Park this summer. The Chicago Department of Cultural Affairs and Special Events (DCASE) today announced nine new Millennium Park Summer Theatre Residencies as part of the 2019 Year of Chicago Theatre. The free series will feature nine local theatre companies performing throughout Millennium Park on select dates from July to October. The participating companies include Aguijón Theater Company, Barrel of Monkeys, CircEsteem, Chicago Dance Crash, Chicago Full Moon Jam Productions, Collaboraction Theatre Company, Emerald City Theatre, eta Creative Arts and Free Street Theater.",
+  //   eventDate: "09/17/2019 - 09/21/2019",
+  //   eventTime: "7 PM",
+  //   location: "Millenium Park",
+  //   url: "https://do312.com/events/2019/9/17/the-moonlight-parade",
+  //   date: new Date(Date.now())
+  // }
   {
     title: "The Dead Zone",
     author: "Stephen King",
