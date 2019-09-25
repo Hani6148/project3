@@ -1,9 +1,9 @@
 import React from "react";
-
-import SideNavigation from "./components/SideNavigation";
+ import SideNavigation from  './components/SideNavigation';
 
 function App() {
   return (
+    
       <SideNavigation />
   );
 }
