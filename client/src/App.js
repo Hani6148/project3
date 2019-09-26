@@ -10,7 +10,7 @@ import Signup from "./components/Signup/Signup";
 function App() {
   return (
     <Router>
-      <div>
+      <Switch>
 
         <Switch>
           
@@ -22,7 +22,7 @@ function App() {
           <Route exact path="/books/:id" component={Detail} /> */}
           <Route component={NoMatch} />
         </Switch>
-      </div>
+      </Switch>
     </Router>
   );
 }
