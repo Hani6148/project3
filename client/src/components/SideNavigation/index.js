@@ -13,6 +13,6 @@ function SideNavigation() {
     <NavButton name="Contact"/>
 </div>
   );
-}
+} 
 
 export default SideNavigation;
