@@ -21,9 +21,9 @@ class Detail extends Component {
       <Container fluid>
         <Row>
           <Col size="md-12">
-            <Jumbotron>
+             <Jumbotron>
               <h1>
-                {this.state.book.title} by {this.state.book.author}
+                {/* {this.state.book.title} by {this.state.book.author} */}
               </h1>
             </Jumbotron>
           </Col>
@@ -31,16 +31,13 @@ class Detail extends Component {
         <Row>
           <Col size="md-10 md-offset-1">
             <article>
-              <h1>Synopsis</h1>
-              <p>
-                {this.state.book.synopsis}
-              </p>
+              <p>Under construction</p>
             </article>
           </Col>
         </Row>
         <Row>
           <Col size="md-2">
-            <Link to="/">← Back to Authors</Link>
+            <Link to="/">← Back to Events</Link>
           </Col>
         </Row>
       </Container>
