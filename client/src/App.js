@@ -21,12 +21,7 @@ function App() {
         </Switch>
       </div>   
     </Router>
- 
-  return (
-    
-      <SideNavigation />
- 
-  );
+ )
 }
 
 export default App;
