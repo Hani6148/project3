@@ -8,7 +8,7 @@ router.route("/")
 
 // Matches with "/api/books/:id"
 router
-  .route("/:id")
+  .route("/fn/:firstname/ln/:lastname")
   .get(usersController.findById)
   .put(usersController.update)
   .delete(usersController.remove);

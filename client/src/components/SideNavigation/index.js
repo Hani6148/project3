@@ -13,7 +13,8 @@ import Button from "../Button"
 export default class SideNavigation extends Component {
   state = {
     users: [],
-    searchTerm: "",
+    firstname: "",
+    lastname: "",
   };
 
   handleInputChange = event => {
@@ -25,9 +26,17 @@ export default class SideNavigation extends Component {
 
   handleFormSubmit = event => {
     event.preventDefault();
-    if (this.state.searchTerm) {
-      API.getUsers(this.state.searchTerm)
+    console.log('form clicked')
+    if (this.state.firstname && this.state.lastname) {
+      console.log(`conditional first and last is met`)
+      let query = {
+        firstname: this.state.firstname,
+        lastname: this.state.lastname
+      };
+      console.log(`is the query built?: ${JSON.stringify(query, "paul", 2)}`)
+      API.getUsers(query)
         .then(res => {
+          console.log(`response from api.getUsers completed`)
 
           console.log(res.data)
           this.setState({
@@ -40,6 +49,8 @@ export default class SideNavigation extends Component {
   };
 
   render() {
+
+    console.log(this.state)
     return (
       <Container>
         <Row>
@@ -55,10 +66,16 @@ export default class SideNavigation extends Component {
           <div class="col-md-6">
             <form>
               <Input
-                name="searchTerm"
-                value={this.state.searchTerm}
+                name="firstname"
+                value={this.state.firstname}
                 onChange={this.handleInputChange}
-                placeholder="Search For a user"
+                placeholder="Search First name"
+              />
+              <Input
+                name="lastname"
+                value={this.state.lastname}
+                onChange={this.handleInputChange}
+                placeholder="Search Last name"
               />
               <Button
                 onClick={this.handleFormSubmit}
@@ -70,21 +87,24 @@ export default class SideNavigation extends Component {
             </form>
 
             <div>
-              {!this.state.users.length ? (
+              {!this.state.users ? (
                 <h1 className="text-center">No Users to Display</h1>
               ) : (
                   <div>
-                    {this.state.users.map(user => {
+                    <h1>{this.state.users.firstname}</h1>
+                    <h1>{this.state.users.lastname}</h1>
+                    <h2>{this.state.users.email}</h2>
+                    {/* {this.state.users.map(user => {
                       return (
                         <div>
                           <div class="card">
                             <div class="card-body">
-                            <h1>{user.firstname} {user.lastname}</h1> <button class="btn btn-lg">Invate</button>
-                             </div>
+                              <h1>{user.firstname} {user.lastname}</h1> <button class="btn btn-lg">Invate</button>
+                            </div>
                           </div>
                         </div>
                       );
-                    })}
+                    })} */}
                   </div>
                 )}
             </div>
