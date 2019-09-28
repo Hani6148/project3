@@ -6,6 +6,7 @@ import NoMatch from "./pages/NoMatch";
 // import footer from "./components/";
 import Login from "./components/Login/Login";
 import Signup from "./components/Signup/Signup";
+import Welcome from "./components/Welcome/Welcome";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           
         <Route exact path="/login" component={Login} />
         <Route exact path="/signup" component={Signup}/>
+        <Route exact path="/welcome" component={Welcome}/>
           {/* <Route exact path="/" component={Books} /> */}
 {/* 
           <Route exact path="/books" component={Books} />

@@ -5,6 +5,10 @@ const routes = require("./routes");
 const app = express();
 const PORT = process.env.PORT || 3001;
 
+// Requiring the `User` model for accessing the `users` collection
+const Logins = require("./models/logins");
+
+
 // Define middleware here
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
@@ -16,7 +20,7 @@ if (process.env.NODE_ENV === "production") {
 app.use(routes);
 
 // Connect to the Mongo DB
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/eventBook");
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/reactreadinglist");
 
 // Start the API server
 app.listen(PORT, function() {
