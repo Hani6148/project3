@@ -19,7 +19,7 @@ function App() {
           <Route exact path="/books/:id" component={Detail} />
           <Route component={NoMatch} />
         </Switch>
-      </div>
+      </div>   
     </Router>
  
   return (
