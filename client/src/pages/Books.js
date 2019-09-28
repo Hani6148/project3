@@ -8,8 +8,10 @@ import { List, ListItem } from "../components/List";
 import { Input, TextArea, ImageArea, FormBtn } from "../components/Form";
 import moment from 'moment';
 import axios from 'axios';
+import SideNavigationv from "../components/SideNavigation"
 // import Thumbnail from '../components/Thumbnail';
 import Pictures from "../components/pictures";
+import SideNavigation from "../components/SideNavigation";
 require('dotenv').config()
 
 class Books extends Component {
@@ -126,8 +128,8 @@ class Books extends Component {
 
   render() {
     return (
-      <div>
-         <SideNavigation />
+<div>
+  <SideNavigation />
       <Container fluid>
         <Row>
           {/* <Col size="md-6 sm-12"> */}
@@ -135,25 +137,10 @@ class Books extends Component {
             <Jumbotron>
               <h1></h1>
             </Jumbotron>
-            {/* {this.state.books.length ? (
-              <List>
-                {this.state.books.map(book => (
-                  <ListItem key={book._id}>
-                    <Link to={"/books/" + book._id}>
-                      <strong>
-                        {book.title} by {book.author}
-                      </strong>
-                    </Link>
-                    <DeleteBtn onClick={() => this.deleteBook(book._id)} />
-                  </ListItem>
-                ))}
-              </List>
-            ) : (
-                <h3>No Results to Display</h3>
-              )} */}
+
           </Col>
 
-          {/* <Col size="md-6"> */}
+
           <Col size="md-4">
             <Jumbotron>
               <h1>Create an event</h1>
@@ -201,49 +188,23 @@ class Books extends Component {
                 name="url"
                 placeholder="URL (optional)"
               />
-              {/* ********************************************************** */}
+
               <Pictures
                 profilePhotoURL={this.state.image}
                 showWidget={this.showWidget}
               />
-              {/* <div className="App">
-                <input type="file" name="" id="" onChange={this.handleselectedFile} />
-                <button onClick={this.handleUpload}>Upload</button>
-                <div> {Math.round(this.state.loaded, 2)} %</div>
-              </div> */}
-              {/* ********************************************************** */}
+
               <FormBtn
-                // disabled={!(this.state.author && this.state.title)}
+
                 onClick={this.handleFormSubmit}
               >
-                {/* Submit Book */}
+
                 Create
               </FormBtn>
             </form>
           </Col>
 
-          {/* <Col size="md-6 sm-12"> */}
-          {/* <Col size="md-4">
-            <Jumbotron>
-              <h1>Books On My List</h1>
-            </Jumbotron>
-            {this.state.books.length ? (
-              <List>
-                {this.state.books.map(book => (
-                  <ListItem key={book._id}>
-                    <Link to={"/books/" + book._id}>
-                      <strong>
-                        {book.title} by {book.author}
-                      </strong>
-                    </Link>
-                    <DeleteBtn onClick={() => this.deleteBook(book._id)} />
-                  </ListItem>
-                ))}
-              </List>
-            ) : (
-                <h3>No Results to Display</h3>
-              )}
-          </Col> */}
+
 
           <Col size="md-4">
             <Jumbotron>
@@ -290,8 +251,7 @@ class Books extends Component {
           </Col>
         </Row>
       </Container>
-      <div/>
-     
+      </div>
     );
   }
 }
