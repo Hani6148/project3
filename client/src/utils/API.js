@@ -1,7 +1,10 @@
 import axios from "axios";
 
 export default {
-
+  // Gets all books
+  getUsers: function(query) {
+    return axios.get("/api/users",{ params: { firstname: query } })
+  },
   saveFile: function(){
     // $('#fileupload').fileupload();
       alert("this is a test")

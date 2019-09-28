@@ -7,6 +7,7 @@ const bookSchema = new Schema({
   lastname: { type: String, required: true },
   email: { type: String, required: true },
   password: { type: String, required: true },
+  date: { type: Date, default: Date.now } , 
   eventsHosted: [
       { type: Schema.Types.ObjectId, ref: 'Event' }
   ],

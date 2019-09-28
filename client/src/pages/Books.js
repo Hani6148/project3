@@ -126,6 +126,8 @@ class Books extends Component {
 
   render() {
     return (
+      <div>
+         <SideNavigation />
       <Container fluid>
         <Row>
           {/* <Col size="md-6 sm-12"> */}
@@ -288,6 +290,8 @@ class Books extends Component {
           </Col>
         </Row>
       </Container>
+      <div/>
+     
     );
   }
 }

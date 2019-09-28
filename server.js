@@ -23,6 +23,7 @@ app.use(fileUpload())
 
 // Serve up static assets (usually on heroku)
  
+if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
 }
 
@@ -49,12 +50,8 @@ app.post('/upload', function (req, res, next)   {
 })
 // Add routes, both API and view
 app.use(routes);
-<<<<<<< HEAD
 
 
-=======
- 
->>>>>>> dawid
 // Connect to the Mongo DB
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/eventBook");
 
